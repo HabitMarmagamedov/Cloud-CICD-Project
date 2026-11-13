@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Иван Иванов — портфолио веб-разработчика</title>
+  <meta name="description" content="Портфолио начинающего веб-разработчика: проекты, навыки и контакты.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="#top">BB</a>
+    <div class="nav-links">
+      <a href="#about">Обо мне</a>
+      <a href="#skills">Навыки</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contacts">Контакты</a>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Сменить тему">◐</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <h1>Хабит Мармагамедов<br>создаёт сайты и&nbsp;автоматизирует их выпуск</h1>
+    <p class="lead">Начинающий веб-разработчик. Пишу на HTML, CSS и JavaScript, а публикацию сайта доверяю GitHub Actions.</p>
+
+    <div class="pipeline" aria-live="polite">
+      <ol class="stages" id="stages">
+        <li data-stage="commit"><span class="dot"></span><b>Код</b><small>commit и push</small></li>
+        <li data-stage="check"><span class="dot"></span><b>Проверка</b><small>тесты и линтер</small></li>
+        <li data-stage="build"><span class="dot"></span><b>Сборка</b><small>готовим файлы</small></li>
+        <li data-stage="deploy"><span class="dot"></span><b>Публикация</b><small>GitHub Pages</small></li>
+      </ol>
+      <div class="pipeline-bar">
+        <p id="pipelineStatus">Это мой учебный pipeline. Запусти его и посмотри, как сайт попадает в сеть.</p>
+        <div class="btn-row">
+          <label class="switch"><input type="checkbox" id="breakCode"> Ошибка в коде</label>
+          <button class="btn" id="runBtn" type="button">Запустить pipeline</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>Обо мне</h2>
+      <div class="about-grid">
+        <p>Я студент колледжа и учусь разрабатывать веб-приложения. Мне нравится, когда результат работы можно сразу открыть в браузере и показать другим.</p>
+        <p>Сейчас осваиваю облачные технологии и CI/CD: этот сайт сам проверяется и публикуется после каждого push в репозиторий.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Навыки</h2>
+      <div class="filters" role="group" aria-label="Фильтр навыков">
+        <button class="chip active" data-filter="all" type="button">Все</button>
+        <button class="chip" data-filter="front" type="button">Интерфейс</button>
+        <button class="chip" data-filter="tools" type="button">Инструменты</button>
+        <button class="chip" data-filter="cloud" type="button">Облако</button>
+      </div>
+      <ul class="skills" id="skillList">
+        <li data-cat="front"><span>HTML и CSS</span><i style="--lvl:80%"></i></li>
+        <li data-cat="front"><span>JavaScript</span><i style="--lvl:60%"></i></li>
+        <li data-cat="tools"><span>Git и GitHub</span><i style="--lvl:70%"></i></li>
+        <li data-cat="tools"><span>Visual Studio Code</span><i style="--lvl:85%"></i></li>
+        <li data-cat="cloud"><span>GitHub Actions</span><i style="--lvl:50%"></i></li>
+        <li data-cat="cloud"><span>GitHub Pages</span><i style="--lvl:65%"></i></li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Проекты</h2>
+      <ul class="projects">
+        <li>
+          <span class="year">2026</span>
+          <div>
+            <h3>Cloud-CICD-Project</h3>
+            <p>Этот сайт: автоматическая проверка и публикация через GitHub Actions.</p>
+            <p class="tags">HTML · CSS · JavaScript · GitHub Actions</p>
+          </div>
+        </li>
+        <li>
+          <span class="year">2026</span>
+          <div>
+            <h3>Электронная библиотека</h3>
+            <p>Каталог книг с поиском по названию и автору.</p>
+            <p class="tags">HTML · CSS · JavaScript</p>
+          </div>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <h3>Сайт колледжа</h3>
+            <p>Адаптивная страница с расписанием и новостями.</p>
+            <p class="tags">HTML · CSS</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <p>Напиши мне, если хочешь обсудить проект или стажировку.</p>
+      <div class="btn-row">
+        <button class="btn" id="copyBtn" type="button">Скопировать email</button>
+        <a class="btn ghost" href="mailto:ivan@example.com">Открыть почту</a>
+      </div>
+      <p class="mail" id="mailText">ivan@example.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Иван Иванов. Сайт опубликован автоматически через GitHub Actions.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
